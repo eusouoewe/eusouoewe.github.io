@@ -27,37 +27,38 @@ body {
 
 .header {
   background-color: var(--azul-escuro);
-}
-
-.header  {
   width: 100%;
 }
 
 .title, .subtitle {
-  margin: 20px 0;
+  padding: 20px 0;
   color: var(--branco);
   font-family: "Rubik";
 }
 
 .aboutMe {
   width: 80%;
+  margin: auto;
   text-align: justify; 
   text-justify: auto;
 }
 
 .knowledges {
   width: 80%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
   color: var(--preto);
   background-color: var(--azul-claro);
 }
 
-.languages, .frameworks, .projects {
-  padding: 15px 0;
-  text-align: left;
+.knowledges .subtitle {
+  grid: 1/2;
+}
+
+.languages, .frameworks {
+  grid: 2/3;
 }
 
 .projects a {
@@ -90,7 +91,7 @@ body {
   }
   .parallax > use:nth-child(1) {
     animation-delay: -2s;
-    animation-duration: 4s;
+    animation-duration: 5s;
   }
   .parallax > use:nth-child(2) {
     animation-delay: -3s;
@@ -98,11 +99,11 @@ body {
   }
   .parallax > use:nth-child(3) {
     animation-delay: -4s;
-    animation-duration: 10s;
+    animation-duration: 9s;
   }
   .parallax > use:nth-child(4) {
     animation-delay: -5s;
-    animation-duration: 13s;
+    animation-duration: 11s;
   }
   @keyframes move-forever {
     0% {
