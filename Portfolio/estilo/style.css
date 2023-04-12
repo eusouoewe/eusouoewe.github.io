@@ -10,12 +10,10 @@
 }
 
 :root {
-    --cinza-escuro: #1b1d1e;
+    --cinza-escuro: #1B1D1E;
     --preto: #000000;
-    --branco: #ffffff;
-    --azul-escuro: #1f16e5;
-    --azul-claro: #1eedff;
-    --lilas: #5e59c6; 
+    --branco: #FFFFFF;
+    --cinza-claro: #7A6F75;
 }
 
 body {
@@ -24,38 +22,39 @@ body {
 }
 
 .header {
-  background-color: var(--azul-escuro);
+  background-color: var(--preto);
   width: 100%;
 }
 
 .header .title, .header .subtitle {
   padding: 20px 0;
   color: var(--branco);
-  font-family: 'Rubik', sans-serif;
 }
 
 .aboutMe {
   width: 100%;
-  background-color: var(--azul-claro);
+  background-color: var(--cinza-escuro);
+  padding-bottom: 20px;
 }
 
 .aboutMe .subtitle, .aboutMe p {
   width: 80%;
   margin: auto;
-  text-align: justify; 
-  text-justify: auto;
+  justify-content: center;
+  color: var(--cinza-claro);
 }
 
 .aboutMe .subtitle, .knowledges .subtitle, .projects .subtitle, .knowledges h4, .frameworks h4, .projects .subtitle {
   padding: 20px 0;
+  font-family: 'Rubik', sans-serif;
 }
 
 .knowledges {
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: var();
-  background-color: var(--lilas);
+  color: var(--branco);
+  background-color: var(--cinza-claro);
   padding: 30px;
 }
 
@@ -63,8 +62,9 @@ body {
   display: flex;
   flex-direction: row;
   width: 80%;
+  min-width: 60%;
   margin: auto;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .knowledge-columns ul li, .projects ul li {
@@ -77,16 +77,43 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var();
-  color: var(--azul-claro);
+  background-color: var(--branco);
+  color: var(--preto);
   padding: 20px;
 }
 
 .projects a {
   text-decoration: none;
-  margin: 20px 0;
-  color: var(--azul-claro);
+  padding: 20px 0;
+  color: var(--preto);
 }
+
+.contact {
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--preto);
+
+}
+
+.contact-images {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+.contact-images:hover {
+  box-shadow: 1px 2px 2px var(--cinza-escuro);
+}
+
+.contact-images img {
+  width: 80px;
+}
+
 
 .waves {
     position: relative;
@@ -95,17 +122,6 @@ body {
     margin-bottom: -7px; /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
-  }
-
-  .contact-images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .contact-images img {
-    width: 150px;
-    margin: 0 10px;
   }
 
   .parallax > use {
